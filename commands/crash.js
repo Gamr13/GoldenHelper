@@ -15,7 +15,8 @@ const exampleEmbed = new MessageEmbed()
 	.setColor('#FFD700')
 	.setTitle('RetroArch Crashes.')
 	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
-	.setDescription("")
+	.setDescription("- Crash at Import Content\n Solution: Settings > User Interface > Menu Item Visibility, disable the Expore tab.\n\n- Scan Directory and Scan File don't work\nSolution: Use Manual Scan.'")
+    //.addField("")
 	.setTimestamp()
 	.setFooter('© GoldenSky#6969 | 2021', 'https://i.imgur.com/I2LsE5o.png');
 

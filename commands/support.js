@@ -17,7 +17,6 @@ const exampleEmbed = new MessageEmbed()
 	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
 	.setDescription('Welcome to the Support Section. Here are some Frequently Asked Questions:')
 	.addFields(
-		//{ name: '\u200B', value: '\u200B' },
 		{ name: 'Can I get banned?', value: 'No.', inline: false },
 		{ name: 'Installation Stopped error?', value: 'Ensure your whitelisted account is the only one signed in. Disconnect any guest users too.', inline: false },
 		{ name: 'Remove another device error?', value: '[Click here](https://account.microsoft.com/devices/content) and remove devices from the Microsoft Store', inline: false },
@@ -25,6 +24,7 @@ const exampleEmbed = new MessageEmbed()
 		{ name: 'How do I backup my saves and data?', value: 'Do /backup', inline: false },
 		{ name: 'Will I need to apply to the whitelist after a takedown?', value: 'No.', inline: false },
 		{ name: 'How do I fix black screen on Mupen64plus?', value: 'Quick Menu > Options > RDP Plugin > Angrylion', inline: false },
+		{ name: 'How do I fix no input in Wii games?', value: 'Quick Menu > Controls > Disable the 5th port.', inline: false },
 	)
 	.setTimestamp()
 	.setFooter('© GoldenSky#6969 | 2021', 'https://i.imgur.com/I2LsE5o.png');

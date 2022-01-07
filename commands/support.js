@@ -18,7 +18,6 @@ const exampleEmbed = new MessageEmbed()
 	.setDescription('Welcome to the Support Section. Here are some Frequently Asked Questions:')
 	.addFields(
 		{ name: 'Can I get banned?', value: 'No.', inline: false },
-		{ name: 'Installation Stopped error?', value: 'Ensure your whitelisted account is the only one signed in. Disconnect any guest users too.', inline: false },
 		{ name: 'Remove another device error?', value: '[Click here](https://account.microsoft.com/devices/content) and remove devices from the Microsoft Store', inline: false },
 		{ name: 'What do I do when RetroArch is removed from the store?', value: 'Wait for my re-uploaded announcement.', inline: false },
 		{ name: 'How do I backup my saves and data?', value: 'Do /backup', inline: false },

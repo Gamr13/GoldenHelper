@@ -11,7 +11,8 @@ A bot to assist Dom's Discord with basic questions and concerns.
 6) Paste the following inside:
 
 TOKEN=YoUr.T0k3n.H3rE
-\nTEST_GUILD_ID=Guild_ID_Here
+
+TEST_GUILD_ID=Guild_ID_Here
 
 7) Edit TOKEN= with your bot's token, and TEST_GUILD_ID= with the server you're going to deploy the bot in.
 8) To run the bot, do 'npm start' 

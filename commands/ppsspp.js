@@ -18,9 +18,8 @@ const exampleEmbed = new MessageEmbed()
 	.setDescription('Welcome to the PPSSPP support section. Click one of the links below to lead you to the correct place.')
 	.addFields(
 		{ name: '\u200B', value: '\u200B' },
-		{ name: 'Retail Mode', value: '[Click Here](https://discord.com/channels/538519561230745605/894187500938088449/894187762834632744)', inline: true },
-		{ name: 'Dev Mode', value: '[Click Here](https://discord.com/channels/538519561230745605/894187500938088449/894187762834632744)', inline: true },
+		{ name: 'Retail & Dev mode', value: '[Click Here](https://discord.com/channels/538519561230745605/970073102404968448/970074654783967263)', inline: true },
 	)
 	.setTimestamp()
-	.setFooter('© GoldenSky#6969 | 2021', 'https://i.imgur.com/I2LsE5o.png');
+	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');
 

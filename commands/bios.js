@@ -12,9 +12,14 @@ module.exports = {
 }
 
 const exampleEmbed = new MessageEmbed()
-	.setColor('#FFD700')
+	.setColor('#57f514')
 	.setTitle('BIOS file locations')
 	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
-	.setDescription("Before reading this guide, please make sure you read /ftp first, it will help you connect to your Xbox. \n\n**Step 1)** Connect to your Xbox and open LOCALFOLDER > The RetroArch folder > LocalState > system \n\n**Step 2)** Place all of your BIOS files in here **EXCEPT** PS2 & Wii / GC BIOS files. \n\n**Step 3)** create a 'pcsx2' folder and inside that create a 'bios' folder. It's recommended to create a 'cheats' and 'cheats_ws' folder as well. Your PCSX2 folder should now [look like this](https://i.imgur.com/V5KiBok.png) \n\n**Step 4)** For Dolphin, download [this file](https://cdn.discordapp.com/attachments/538519852697255936/969345769008140308/Dolphin-emu.zip) and extract it on your PC / Phone, then copy it to RetroArch's LocalState folder > system. You should now have pcsx2 and Dolphin-emu folders in RetroArch's LocalState > system folder.")
+	.setDescription("Before reading this guide, please make sure you read /ftp first, it will help you connect to your Xbox.\n\n**Internal system folder location:**\nApps > RetroArch > system\n**USB system folder location:\n**Wherever you created the system / BIOS folder on your USB.")
+	.addFields(
+		{ name: 'PCSX2', value: 'LocalState / USB > system > pcsx2 > bios\n**It is recommended to create the `cheats` and `cheats_ws` folders inside the pcsx2 folder, beside the `bios` folder.**', inline: false },
+		{ name: 'Dolphin', value: 'LocalState / USB > system > Dolphin-emu', inline: false },
+		{ name: 'Other cores (PS1, GBA, etc)', value: 'LocalState / USB > system', inline: false },
+	)
 	.setTimestamp()
 	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');

@@ -12,12 +12,12 @@ module.exports = {
 }
 	
 const exampleEmbed = new MessageEmbed()
-	.setColor('#FFD700')
+	.setColor('#0040d6')
 	.setTitle('FTP Instructions.')
 	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
-	.setDescription("Here you'll find information on connecting to your Xbox from retail or dev mode using the DurangoFTP application.")
+	.setDescription("Welcome to the FTP guide, here you'll find out how to connect to your Xbox via FTP using DurangoFTP.\n\n**Remember to press Start in DurangoFTP**")
 	.addFields(
-		{ name: 'Retail & Dev mode', value: '[Windows & Mac](https://discord.com/channels/538519561230745605/970074445278511214/971114895431045210)' + '\n[Android](https://discord.com/channels/538519561230745605/970074445278511214/971121981506338816)', inline: true },
+		{ name: 'Retail & Dev mode', value: '[Windows, macOS and Linux](https://discord.com/channels/1007582798598647889/1009637510781096076/1009905914091950102)' + '\n[Android](https://discord.com/channels/1007582798598647889/1009637510781096076/1009908497955180604)' + '\n[iOS & iPadOS](https://discord.com/channels/1007582798598647889/1009637510781096076/1009909523122757703)', inline: true },
 	)
 	.setTimestamp()
 	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');

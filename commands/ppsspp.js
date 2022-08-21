@@ -12,14 +12,10 @@ module.exports = {
 }
 	
 const exampleEmbed = new MessageEmbed()
-	.setColor('#FFD700')
-	.setTitle('PPSSPP help section')
+	.setColor('#717ad4')
+	.setTitle('PPSSPP Guide')
 	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
-	.setDescription('Welcome to the PPSSPP support section. Click one of the links below to lead you to the correct place.')
-	.addFields(
-		{ name: '\u200B', value: '\u200B' },
-		{ name: 'Retail & Dev mode', value: '[Click Here](https://discord.com/channels/538519561230745605/970073102404968448/970074654783967263)', inline: true },
-	)
+	.setDescription('Welcome to the PPSSPP support section.\n\n**Step 1)**\nOpen PPSSPP at least once to create the LocalState folder.\n\n**Step 2)**\nFollow /ftp to connect to your Xbox and go to the APPS folder and PPSSPP.\n\n**Step 3)**\nPlace your games in the PSP > GAME folder.\n\n**To use USB:**\n- Create a PSP Games folder on your USB named whatever you want and place your games inside.\n- Inside PPSSPP simply press the up arrow until you see a bunch of letters.\n- In Retail Mode, your USB will be the D:\ folder then select your games folder.\n- In Dev Mode your USB will be the E:\ folder, then select your games folder.')
 	.setTimestamp()
 	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');
 

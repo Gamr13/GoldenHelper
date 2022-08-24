@@ -1,5 +1,5 @@
 # HelperBot
-A bot to assist Dom's Discord with basic questions and concerns.
+A bot to assist Xbox Emulation Hub's Discord with basic questions and concerns.
 
 --------------
 # Setup Guide:

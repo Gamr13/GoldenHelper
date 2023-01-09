@@ -22,7 +22,6 @@ const exampleEmbed = new MessageEmbed()
 		{ name: 'DurangoFTP', value: '[Download](https://github.com/Dantes-Dungeon/DURANGO-FTP/releases)', inline: true },
 		{ name: 'ADV File Explorer Ex', value: '[Download](https://www.mediafire.com/file/2kuk79p111f9mm1/Adv_File_Explorer_Ex_%2528v1.6.6.0%2529.7z/file)', inline: true },
 		{ name: 'PPSSPP', value: '[Download](https://drive.google.com/drive/folders/1LCXnJcauEhKgX5Klvwm8ErEo2qu0EJWL?usp=sharing)', inline: true },
-		{ name: 'DuckStation', value: '[Download](https://github.com/stenzek/duckstation/releases)', inline: true },
 		{ name: 'Flycast', value: '[Download](https://github.com/flyinghead/flycast/releases)', inline: true },
 		{ name: 'XBSX2', value: '[Download](https://github.com/TheRhysWyrill/PCSX2/releases)', inline: true },
 		{ name: 'Retrix Gold', value: '[Download](https://github.com/Aftnet/RetriX/releases)', inline: true },

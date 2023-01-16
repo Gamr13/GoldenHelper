@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,10 +11,10 @@ module.exports = {
     }
 }
 	
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#4287f5')
 	.setTitle('Backup Guide')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription('Welcome to the Backup section. Follow /ftp to find out how to connect to your Xbox in retail or dev mode.')
 	.addFields(
 		{ 
@@ -29,5 +29,3 @@ const exampleEmbed = new MessageEmbed()
 		//inline: true },
 	)
 	.setTimestamp()
-	.setFooter('GoldenSky#6969 | 2022', 'https://i.imgur.com/I2LsE5o.png');
-

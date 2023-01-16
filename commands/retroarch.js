@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,10 +11,10 @@ module.exports = {
     }
 }
 	
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#920dff')
 	.setTitle('RetroArch help section')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription('Welcome to the RetroArch Guide.')
 		.addFields(
 		{ name: '\u200B', value: '\u200B' },
@@ -25,5 +25,3 @@ const exampleEmbed = new MessageEmbed()
 		{ name: 'Step 4)', value: 'Go to Import Content > Manual Scan to add your ROMs to a playlist. \nChoose your content directory where your games are stored \nSelect a System Name \nSelect a core for your games \nType file extensions that apply to your games, e.g: `.iso .chd .gz` \nSelect Start Scan. \nRepeat these steps for each platform you have ROMs for (PS2, GBA, Wii, etc)', inline: false },
 	)
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');
-

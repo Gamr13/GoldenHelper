@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -10,11 +10,12 @@ module.exports = {
         interaction.reply({ embeds: [exampleEmbed] })
     }
 }
-const exampleEmbed = new MessageEmbed()
+
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#920dff')
 	.setTitle('USB Setup Guide!')
 	.setImage('https://i.imgur.com/avZHCJO.png')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription('Welcome to the USB Setup Guide.')
 		.addFields(
 			{ name: 'Step 1)', value: 'We recommend setting up two folder named "Games" and "RetroArch", this is where we will store necessary RetroArch files and games.', inline: false },
@@ -26,7 +27,5 @@ const exampleEmbed = new MessageEmbed()
 			{ name: 'DONE!', value: 'Your USB is now set up in the best way possible!', inline: false },
 		)
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');
-
 
 

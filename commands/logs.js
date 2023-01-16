@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,10 +11,10 @@ module.exports = {
     }
 }
 	
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#d60024')
 	.setTitle('Logs Guide')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription('Here is how to enable logs and send it to us:')
 	.setImage('https://i.imgur.com/T4YdaBI.png')
 	.addFields(
@@ -25,4 +25,3 @@ const exampleEmbed = new MessageEmbed()
 		{ name: 'Step 4)', value: 'Follow /ftp or the video guide in /videos to get to the logs folder. From there, send us the log inside.', inline: false },
 	)
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');

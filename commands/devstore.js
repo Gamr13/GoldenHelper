@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,10 +11,10 @@ module.exports = {
     }
 }
 
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#FFD700')
 	.setTitle('Dev Mode Store')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription('Welcome to the Dev Mode Store! Here you can get links to a ton of .appx files for dev mode!')
 	.addFields(
 		{ name: '\u200B', value: '\u200B' },
@@ -37,4 +37,3 @@ const exampleEmbed = new MessageEmbed()
 		{ name: 'Sonic Time Twisted', value: '[Download](https://www.mediafire.com/file/74shtqbyzr4q2dg/Sonic_Time_Twisted_%255BUnofficial%255D_%2528v1.1.2.0%2529.appx/file)', inline: true },
 	)
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');

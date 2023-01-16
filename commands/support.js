@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,10 +11,10 @@ module.exports = {
     }
 }
 	
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#b0ff29')
 	.setTitle('Support section')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription('Welcome to the Support Section. Here are some Frequently Asked Questions:')
 	.addFields(
 		{ name: '**Will I get banned?**', value: 'No.', inline: false },
@@ -25,5 +25,3 @@ const exampleEmbed = new MessageEmbed()
 		{ name: '**Games crash when loading from USB**', value: 'Ensure you have followed /usb, if you feel you have, do /logs and send a log.', inline: false },
 	)
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');
-

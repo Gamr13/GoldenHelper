@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,10 +11,10 @@ module.exports = {
     }
 }
 
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#920dff')
 	.setTitle('USB Setup Guide!')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setImage('https://cdn.discordapp.com/attachments/1009637731577626705/1009916490163703838/bNyBfIjRSD.gif')
 	.setDescription('Welcome to the USB Setup Guide.')
 		.addFields(
@@ -26,4 +26,3 @@ const exampleEmbed = new MessageEmbed()
 		{ name: 'NOTE:', value: 'You **WILL** get an error about System Volume Information, click continue and ignore it.', inline: false },
 	)
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');

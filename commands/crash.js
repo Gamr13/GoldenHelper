@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed } = require('discord.js');
+const {EmbedBuilder} = require("discord.js");
 
 
 module.exports = {
@@ -11,12 +11,10 @@ module.exports = {
     }
 }
 	
-const exampleEmbed = new MessageEmbed()
+const exampleEmbed = new EmbedBuilder()
 	.setColor('#FFD700')
 	.setTitle('RetroArch Crashes.')
-	.setAuthor('GoldenHelper', 'https://i.imgur.com/o7MkhhK.png')
+	.setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
 	.setDescription("**- Crash when trying to navigate to the playlists**:\n Solution: Settings > User Interface > Menu Item Visibility, disable the Expore tab.\n\n**- Scan Directory and Scan File don't add some ROMs to the playlist**:\nSolution: Use Manual Scan.\n\n**- Online Updater freezes / crashes RetroArch**:\nSolution: Keep restarting RetroArch and retrying, there's no fix for this currently.")
     //.addField("") 	//Just to remind me this exists and can be used.
 	.setTimestamp()
-	.setFooter('GoldenSky#4649 | 2022', 'https://i.imgur.com/I2LsE5o.png');
-

@@ -1,4 +1,4 @@
-# HelperBot
+# GoldenHelper
 A bot to assist Xbox Emulation Hub's Discord with basic questions and concerns.
 
 --------------

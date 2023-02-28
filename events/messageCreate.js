@@ -34,6 +34,8 @@ module.exports = {
                 fs.writeFileSync("./data/strikes.json", JSON.stringify(strikes, null, 2), "utf8");
         
                 punish(message.member);
+
+                message.reply({ content: `You said a bad word, stinky >:c`, ephemeral: true });
             }
         }
     }

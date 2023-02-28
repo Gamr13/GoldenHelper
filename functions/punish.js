@@ -9,7 +9,7 @@ let punish = (user) => {
     const punishments = JSON.parse(punishmentsFile);
 
     punishments.forEach(punishment => {
-        if (strikes[user.id].strikes == punishment.strikes) {
+        if (strikes[user.id].strikes >= punishment.strikes) {
             let type = punishment.type.split(" ")[0];
 
             if (type == "mute") {

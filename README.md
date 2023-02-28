@@ -1,4 +1,4 @@
-# Discord Bot Template
+# Discord Bot Template - GoldenHelper
 ---
 ## Installation
 1) Download the Zip

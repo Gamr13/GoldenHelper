@@ -6,7 +6,7 @@
    - discord.js
    - fs
    - ms
-3) Installing of the Modules
+3) Installing the Modules
     - `npm install discord.js@14.7.1`
     - `npm install fs@latest`
     - `npm install ms@latest`

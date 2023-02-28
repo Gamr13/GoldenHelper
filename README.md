@@ -7,9 +7,9 @@
    - fs
    - ms
 3) Installing of the Modules
-    - `npm i discord.js`
-    - `npm i fs`
-    - `npm i ms`
+    - `npm install discord.js@14.7.1`
+    - `npm install fs@latest`
+    - `npm install ms@latest`
 4) Change the Owner ID, Bot Client ID and Bot Token in `~/data/config.json`
    ```json
    {

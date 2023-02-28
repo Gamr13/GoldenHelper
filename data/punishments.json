@@ -1,0 +1,14 @@
+[
+    {
+        "strikes": 1,
+        "type": "mute 1h"
+    },
+    {
+        "strikes": 2,
+        "type": "mute 24h"
+    },
+    {
+        "strikes": 3,
+        "type": "ban"
+    }
+]

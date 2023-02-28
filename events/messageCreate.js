@@ -35,7 +35,7 @@ module.exports = {
         
                 punish(message.member);
 
-                message.reply({ content: `You said a bad word, stinky >:c`, ephemeral: true });
+                message.reply({ content: `You did a fucky wucky~ Nya~! >w<`, ephemeral: true });
             }
         }
     }

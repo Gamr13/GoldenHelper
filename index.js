@@ -1,3 +1,15 @@
+/*
+
+Original Bot has been written by: Gamr13/GoldenSky - https://github.com/Gamr13
+Template Created by: Adrian Kuśmierek - https://github.com/AdrianKusmierek
+Bot Upgraded and Updated at 28/02/2023 by: Adrian Kuśmierek - https://github.com/AdrianKusmierek
+
+Any further changes to this project will be made by the Bot Holders.
+In any other case, additions to this comment should
+be made by any other contributors.
+
+*/
+
 //////////////////////////////////////////////////////////
 ///                   Main Variables                   ///
 //////////////////////////////////////////////////////////

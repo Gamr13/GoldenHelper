@@ -1,4 +1,4 @@
-# GoldenHelper - Template Oct. 2022
+# GoldenHelper - Rewrite
 ---
 ## Installation
 1) Download the Zip

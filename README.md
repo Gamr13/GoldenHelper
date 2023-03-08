@@ -5,7 +5,7 @@ This bot has been rewritted by me and all the migrated commands<br>
 from the original fork are within `~/commands/client-customs/` folder.
 ## Installation
 1) Download the Zip
-2) Installing the Required Modules
+2) Install the Required Modules
     - `npm install discord.js@14.7.1`
     - `npm install fs@latest`
     - `npm install ms@latest`

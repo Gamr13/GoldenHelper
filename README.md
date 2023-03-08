@@ -2,7 +2,7 @@
 ---
 ## Rewrite
 This bot has been rewritted by me and all the migrated commands<br>
-from the original fork are within `~/commands/client-customs/` folder
+from the original fork are within `~/commands/client-customs/` folder.
 ## Installation
 1) Download the Zip
 2) Installing the Required Modules

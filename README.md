@@ -1,7 +1,7 @@
 # GoldenHelper - Rewrite
 ---
 ## Rewrite
-This bot has been rewritted by @AdrianKusmierek and all the migrated commands<br>
+This bot has been rewritten by @AdrianKusmierek and all the migrated commands<br>
 from the original fork are within `~/commands/client-customs/` folder.
 ## Installation
 1) Download the Zip

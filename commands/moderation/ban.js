@@ -41,7 +41,7 @@ module.exports = {
                 { name: 'Reason:', value: `${reason}`, inline: false },
             )
 
-        await banMember.send({ embeds: [dmEmbed] }).catch(err => return);
+        await banMember.send({ embeds: [dmEmbed] }).catch(err => err);
 
         await banMember.ban({ reason: reason }).catch(err => {
             interaction.reply({ content: `There was an error.`, ephemeral: true});

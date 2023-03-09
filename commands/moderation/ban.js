@@ -20,11 +20,17 @@ module.exports = {
 
         let reason = interaction.options.getString('reason');
         if (!reason) reason = "No reason given.";
+        
+        let dmMessageContent = [
+            "awoo",
+            "mlem",
+            "coded by gay furry L"
+        ];
 
         const dmEmbed = new EmbedBuilder()
         .setColor("DarkOrange")
         .addFields(
-            { name: ':white_check_mark:', value: `Your ass got perma-banned from **${interaction.guild.name}**`, inline: false },
+            { name: ':white_check_mark:', value: `{dmMessageContent[Math.floor(Math.random() * 3)]}`, inline: false },
             { name: 'Reason:', value: `${reason}`, inline: false },
         )
 

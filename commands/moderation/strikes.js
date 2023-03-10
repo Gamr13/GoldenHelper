@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, PermissionFlagsBits } = require("discord.js");
 const fs = require("fs");
 
 module.exports = {
@@ -10,7 +10,9 @@ module.exports = {
         .setName("user")
         .setDescription("The user to get the strikes of")
         .setRequired(true)
-    ),
+    )
+    .setDefaultMemberPermissions(PermissionFlagsBits.MuteMembers),
+
 
     async execute(interaction) {
         const user = interaction.options.getMember("user");

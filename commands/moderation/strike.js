@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, PermissionFlagsBits } = require("discord.js");
 const { punish } = require("../../functions/punish.js");
 const { client } = require("../../index.js");
 const fs = require("fs");
@@ -17,7 +17,9 @@ module.exports = {
         .setName("reason")
         .setDescription("Reason for the strike.")
         .setRequired(true)
-    ),
+    )
+	.setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
+
 
     async execute(interaction) {
         const user = interaction.options.getMember("user");

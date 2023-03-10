@@ -28,7 +28,8 @@ module.exports = {
             .setDescription("Target User.")
             .setRequired(true)    
         )
-    ),
+    )
+    .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
 
     async execute(interaction) {
         const user_add = interaction.options.getUser("user_add");

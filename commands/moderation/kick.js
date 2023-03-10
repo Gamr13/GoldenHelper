@@ -22,15 +22,15 @@ module.exports = {
         if (!reason) reason = "No reason given.";
 
         let dmMessageContent = [
-            "awoo",
-            "mlem",
-            "coded by gay furry L"
+            `:boot: ｜ You've been kicked from **${interaction.guild.name}**.`,
+            `:boot: ｜ Ouch! You've been booted from **${interaction.guild.name}**.`,
+            `:boot: ｜ I shidded and farded.`
         ];
 
         const dmEmbed = new EmbedBuilder()
         .setColor("DarkOrange")
         .addFields(
-            { name: ':white_check_mark:', value: `{dmMessageContent[Math.floor(Math.random() * 3)]}`, inline: false },
+            { name: ':white_check_mark:', value: `${dmMessageContent[Math.floor(Math.random() * 3)]}`, inline: false },
             { name: 'Reason:', value: `${reason}`, inline: false },
         )
         

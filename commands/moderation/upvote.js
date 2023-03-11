@@ -59,7 +59,7 @@ module.exports = {
                 .then(role => {
                     user.roles.add(role)
                     .then(() => {
-                        interaction.followUp({ embeds: [followupEmbed] });
+                        return interaction.followUp({ embeds: [followupEmbed] });
                     })
                     .catch(err => {
                         console.error(err);

@@ -57,7 +57,7 @@ module.exports = {
             blacklist[content] = {
                 message_remove: message_remove,
                 strikes_given: strikes_given,
-                reponse: response
+                response: response
             };
             
             // Writing the data into the .json file

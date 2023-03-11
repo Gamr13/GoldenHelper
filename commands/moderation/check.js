@@ -38,7 +38,7 @@ module.exports = {
         .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${interaction.user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
         .addFields(
-            { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: false }
+            { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
         );
 
         interaction.reply({ embeds: [embed] }); 

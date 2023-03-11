@@ -24,6 +24,10 @@ module.exports = {
             .setDescription("The number of strikes to give")
             .setRequired(true)    
         )
+        .addStringOption(option => option
+            .setName("response")
+            .setDescription("The reply message to send, if left blank, none will be sent")
+        )
     )
     .addSubcommand(subcommand => subcommand
         .setName("remove")
@@ -44,6 +48,7 @@ module.exports = {
             let content = interaction.options.getString("content").toLowerCase();
             let message_remove = interaction.options.getBoolean("message_remove");
             let strikes_given = interaction.options.getInteger("strikes_given");
+            let response = interaction.options.getString("response");
             
             const blacklistFile = fs.readFileSync("./data/blacklist.json", "utf8");
             const blacklist = JSON.parse(blacklistFile);
@@ -51,7 +56,8 @@ module.exports = {
             // Adding the content into the .json file as a JSON Snowflake
             blacklist[content] = {
                 message_remove: message_remove,
-                strikes_given: strikes_given
+                strikes_given: strikes_given,
+                reponse: response
             };
             
             // Writing the data into the .json file

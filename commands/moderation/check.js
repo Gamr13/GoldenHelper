@@ -38,7 +38,8 @@ module.exports = {
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
-        .addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
+        .addField("Account Created On:", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY")}`, true) 
+        .addField("Roles:", member.roles.map(roles => `${roles}`).join(', '), true)
         .addFields(
             { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
         );

@@ -35,7 +35,7 @@ module.exports = {
         .setColor('#920dff')
         .setTitle(`Strikes`)
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
-        .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${interaction.user.id} )`)
+        .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
         .addFields(
             { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }

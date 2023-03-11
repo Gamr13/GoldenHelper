@@ -6,7 +6,7 @@ const fs = require("fs");
 module.exports = {
     permissions: [PermissionsBitField.Flags.Administrator],
     data: new SlashCommandBuilder()
-    .setName("strike")
+    .setName("check")
     .setDescription("Command to strike a user")
     .addUserOption(user => user
         .setName("user")

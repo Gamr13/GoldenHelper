@@ -39,6 +39,7 @@ module.exports = {
         .setThumbnail(`${user.displayAvatarURL()}`)
         .addFields(
             { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
+            { moment.utc(user.joinedAt.toISOString()).format('dddd, MMMM Do YYYY, HH:mm:ss') }
         );
         interaction.reply({ embeds: [embed] }); 
     }

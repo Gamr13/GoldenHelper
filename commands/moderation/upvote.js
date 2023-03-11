@@ -50,18 +50,26 @@ module.exports = {
 
         for (const [k, v] in rep[0]) {
             if (rep[1][interaction.guild.id][user.id].rep == k) {
+                console.log(k);
+                console.log(v);
                 let followupEmbed = new EmbedBuilder()
                 .setColor('#920dff')
                 .setTitle(`Rankup!`)
                 .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
+                console.log(1);
                 let role = client.guilds.cache.find(_role => _role.id == v)
+                console.log(2);
 
                 user.roles.add(role)
                 .then(() => {
                     interaction.followUp({ embeds: [followupEmbed] });
+                    console.log(3);
                 })
-                .catch(err => console.error(err));
+                .catch(err => {
+                    console.error(err);
+                    console.log(4);
+                });
             }
         }
     }

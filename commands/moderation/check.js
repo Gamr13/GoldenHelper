@@ -38,7 +38,7 @@ module.exports = {
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${interaction.user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
-        .addField('Joined at:', `${moment.utc(user.joinedAt.toISOString()).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Joined at: ', `<t:${parseInt(member.joinedAt / 1000)}:R>`, inline: true)
         .addField('Status:', user.presence.status, true)
         .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
         .addFields(

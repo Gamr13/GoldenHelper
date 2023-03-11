@@ -51,7 +51,7 @@ module.exports = {
         for (const [k, v] in rep[0]) {
             if (rep[1][interaction.guild.id][user.id].rep == k) {
                 console.log(k);
-                console.log(v);
+                console.log(rep[0][k]);
                 let followupEmbed = new EmbedBuilder()
                 .setColor('#920dff')
                 .setTitle(`Rankup!`)

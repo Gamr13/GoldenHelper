@@ -59,8 +59,10 @@ module.exports = {
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
                 console.log(1);
                 let role = client.guilds.fetch(rep[0][k])
-                console.log(2);
-                console.log(role)
+                .then(role => {
+                    console.log(2);
+                    console.log(role)
+                });
 
                 user.roles.add(role)
                 .then(() => {

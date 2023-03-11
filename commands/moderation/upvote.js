@@ -48,15 +48,15 @@ module.exports = {
         await interaction.reply({ embeds: [embed] });
 
         for (const [k, v] in rep[0]) {
-            if (rep[1][interaction.guild.id][user.id].rep == parseInt(k)) {
+            if (rep[1][interaction.guild.id][user.id].rep == v) {
                 let followupEmbed = new EmbedBuilder()
                 .setColor('#920dff')
                 .setTitle(`Rankup!`)
                 .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
-                let role = interaction.guild.roles.cache.find(_role => _role.id == rep[0][k]);
+                let role = interaction.guild.roles.cache.find(_role => _role.id == v);
 
-                user.roles.add(role[0])
+                user.roles.add(role)
                 .then(() => {
                     interaction.followUp({ embeds: [followupEmbed] });
                 })

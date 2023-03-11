@@ -1,6 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, PermissionFlagsBits } = require("discord.js");
 const fs = require("fs");
-const moment = require("moment");
 
 module.exports = {
     permissions: [PermissionsBitField.Flags.Administrator],
@@ -38,9 +37,8 @@ module.exports = {
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${interaction.user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
-        .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
         .addFields(
-            { name: 'Total Amount of Strikes', value: `${content}`, inline: false }
+            { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: false }
         );
 
         interaction.reply({ embeds: [embed] }); 

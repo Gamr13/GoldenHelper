@@ -6,6 +6,7 @@ module.exports = {
     once: false,
 
     execute(oldMessage, newMessage) {
+        if (oldMessage.author.bot) return;
         let embed = new EmbedBuilder()
         .setColor('#920dff')
         .setTitle(`Message Updated`)

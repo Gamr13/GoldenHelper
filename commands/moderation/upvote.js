@@ -69,6 +69,7 @@ module.exports = {
                 .catch(err => {
                     console.error(err); 
                 });
+                // fuck you, discord.js :)
             }
         }
     }

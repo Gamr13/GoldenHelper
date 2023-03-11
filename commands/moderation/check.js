@@ -35,7 +35,11 @@ module.exports = {
         .setColor('#920dff')
         .setTitle(`Strikes`)
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
-        .setDescription(`These are the strikes of ${user.user.tag}`)
+        .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${interaction.user.id} )`)
+        .setThumbnail(`${user.displayAvatarURL}`)
+        .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Status:', user.presence.status, true)
+        .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
         .addFields(
             { name: 'Total Amount of Strikes', value: `${content}`, inline: false }
         );

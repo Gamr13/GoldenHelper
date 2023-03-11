@@ -20,6 +20,8 @@ module.exports = {
         try {
 		client.channels.cache.get("1007583776949403720")
         	.send({ embeds: [embed] });	
-	} catch (err) { return; }
+	} catch (err) {
+		console.error(err);
+	}
     }
 }

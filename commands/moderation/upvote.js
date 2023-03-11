@@ -50,8 +50,6 @@ module.exports = {
 
         for (const [k, v] in rep[0]) {
             if (rep[1][interaction.guild.id][user.id].rep == k) {
-                console.log(k);
-                console.log(rep[0][k]);
                 let followupEmbed = new EmbedBuilder()
                 .setColor('#920dff')
                 .setTitle(`Rankup!`)
@@ -61,17 +59,15 @@ module.exports = {
                 let role = interaction.guild.roles.fetch(rep[0][k])
                 .then(role => {
                     console.log(2);
-                    console.log(role)
-                });
-
-                user.roles.add(role)
-                .then(() => {
-                    interaction.followUp({ embeds: [followupEmbed] });
-                    console.log(3);
-                })
-                .catch(err => {
-                    console.error(err);
-                    console.log(4);
+                    user.roles.add(role)
+                    .then(() => {
+                        interaction.followUp({ embeds: [followupEmbed] });
+                        console.log(3);
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        console.log(4);
+                    });
                 });
             }
         }

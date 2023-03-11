@@ -55,6 +55,7 @@ module.exports = {
                 .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
                 let role = interaction.guild.roles.cache.find(_role => _role.id == v);
+                console.log(role);
 
                 user.roles.add(role)
                 .then(() => {

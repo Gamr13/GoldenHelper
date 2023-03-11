@@ -11,6 +11,8 @@ module.exports = {
         const repFile = fs.readFileSync("./data/rep.json", "utf8");
         const rep = JSON.parse(repFile)[interaction.guild.id];
         
+        console.log(rep);
+        
         let embed = new EmbedBuilder()
         .setColor('#920dff')
         .setTitle(`Leaderboard`)

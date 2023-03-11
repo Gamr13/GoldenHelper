@@ -9,7 +9,7 @@ module.exports = {
     execute (message) {
 	if (!message.member || !message.content || !message || message.author.bot) return;
         let embed = new EmbedBuilder()
-        .setColor('#920dff')
+        .setColor('#F72E1E')
         .setTitle(`Message Deleted`)
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`<@${message.member.id}> has deleted a message!`)

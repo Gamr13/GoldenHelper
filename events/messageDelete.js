@@ -7,7 +7,7 @@ module.exports = {
 	
 
     execute (message) {
-	if (!message.member || !message.content) return;
+	if (!message.member || !message.content || !message) return;
         let embed = new EmbedBuilder()
         .setColor('#920dff')
         .setTitle(`Message Deleted`)

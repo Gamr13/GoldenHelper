@@ -7,7 +7,7 @@ module.exports = {
 	
 
     execute (message) {
-		if (!message.member) return;
+	if (!message.member) return;
         let embed = new EmbedBuilder()
         .setColor('#920dff')
         .setTitle(`Message Deleted`)
@@ -17,7 +17,9 @@ module.exports = {
             { name: 'Deleted Message', value: `${message}`, inline: false }
         );
 
-        client.channels.cache.get("1007583776949403720")
-        .send({ embeds: [embed] });
+        try {
+		client.channels.cache.get("1007583776949403720")
+        	.send({ embeds: [embed] });	
+	} catch (err) return;
     }
 }

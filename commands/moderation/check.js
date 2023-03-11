@@ -38,7 +38,7 @@ module.exports = {
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
-        .addField('Joined at:', `${moment(user.joinedAt).local().format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField("Status:", `${user.presence.status}`, true)
         .addFields(
             { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
         );

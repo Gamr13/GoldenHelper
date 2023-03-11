@@ -38,10 +38,9 @@ module.exports = {
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${user.id} )`)
         .setThumbnail(`${user.displayAvatarURL()}`)
-        .addField(":triangular_flag_on_post: Strikes: ", `${content}`, true )
-        //.addFields(
-          //  { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
-        //);
+        .addFields(
+            { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
+        );
         interaction.reply({ embeds: [embed] }); 
     }
 }

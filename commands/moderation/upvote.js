@@ -58,7 +58,7 @@ module.exports = {
                 .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
                 console.log(1);
-                let role = client.guilds.cache.find(_role => _role.id == rep[0][k])
+                let role = client.guilds.fetch(rep[0][k])
                 console.log(2);
                 console.log(role)
 

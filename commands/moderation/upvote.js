@@ -60,9 +60,7 @@ module.exports = {
                 .then(() => {
                     interaction.followUp({ embeds: [followupEmbed] });
                 })
-                .catch(err => {
-                    interaction.followUp({ content: "Something went wrong", ephemeral: true });
-                });
+                .catch(err => console.error(err));
             }
         }
     }

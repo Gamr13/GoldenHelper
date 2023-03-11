@@ -48,7 +48,7 @@ module.exports = {
         await interaction.reply({ embeds: [embed] });
 
         for (const [k, v] in rep[0]) {
-            if (rep[1][interaction.guild.id][user.id].rep == v) {
+            if (rep[1][interaction.guild.id][user.id].rep == k) {
                 let followupEmbed = new EmbedBuilder()
                 .setColor('#920dff')
                 .setTitle(`Rankup!`)

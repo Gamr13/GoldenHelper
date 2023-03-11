@@ -54,9 +54,9 @@ module.exports = {
                 .setTitle(`Rankup!`)
                 .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
-                let role = interaction.guild.roles.fetch(rep[0][k]);
+                let role = interaction.guild.roles.cache.find(_role => _role.id == rep[0][k]);
 
-                user.roles.add(role)
+                user.roles.add(role[0])
                 .then(() => {
                     interaction.followUp({ embeds: [followupEmbed] });
                 })

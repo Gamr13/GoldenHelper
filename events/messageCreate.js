@@ -7,7 +7,7 @@ module.exports = {
     once: false,
 
     // Code to be run when any message is sent.
-    execute(message) {
+    async execute(message) {
         if (message.author.bot) return;
 
         const blacklistFile = fs.readFileSync("./data/blacklist.json", "utf8");
@@ -36,7 +36,7 @@ module.exports = {
                 punish(message.member);
 
                 if (response) message.reply({ content: response, ephemeral: true });
-                if (message_remove) message.delete();
+                if (message_remove) await message.delete();
             }
         }
     }

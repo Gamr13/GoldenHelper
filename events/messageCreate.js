@@ -23,7 +23,6 @@ module.exports = {
                 let strikes_given = name.strikes_given;
                 let response = name.response;
 
-                if (message_remove) message.delete();
 
                 if (!strikes[message.author.id]) {
                     strikes[message.author.id] = {
@@ -36,11 +35,8 @@ module.exports = {
         
                 punish(message.member);
 
-                console.log(response)
-                if (response != null) {
-                    console.log(response)
-                    message.reply({ content: response, ephemeral: true });
-                }
+                if (response) message.reply({ content: response, ephemeral: true });
+                if (message_remove) message.delete();
             }
         }
     }

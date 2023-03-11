@@ -109,7 +109,7 @@ module.exports = {
             for (const index in blacklist) {
                 let obj = blacklist[index];
 
-                embed.addFields({ name: index, value: `message_remove: ${obj.message_remove}\nstrikes_given: ${obj.strikes_given}`, inline: false });
+                embed.addFields({ name: index, value: `message_remove: ${obj.message_remove}\nstrikes_given: ${obj.strikes_given}\nresponse: ${obj.response}`, inline: false });
             }
 
             interaction.reply({ embeds: [embed] })

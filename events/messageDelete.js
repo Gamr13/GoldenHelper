@@ -17,11 +17,7 @@ module.exports = {
             { name: 'Deleted Message', value: `${message.content}`, inline: false }
         );
 
-        try {
-		client.channels.cache.get("1007583776949403720")
-        	.send({ embeds: [embed] });	
-	} catch (err) {
-		console.error(err);
-	}
+	client.channels.cache.get("1007583776949403720")
+	.send({ embeds: [embed] });	
     }
 }

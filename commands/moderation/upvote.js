@@ -1,4 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { client } = require("../../index.js");
 const fs = require("fs");
 
 module.exports = {
@@ -54,8 +55,7 @@ module.exports = {
                 .setTitle(`Rankup!`)
                 .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
                 .setDescription(`<@${user.user.id}> has ranked up to <@&${rep[0][k]}>`);
-                let role = interaction.guild.roles.cache.find(_role => _role.id == v);
-                console.log(role);
+                let role = client.guilds.cache.find(_role => _role.id == v)
 
                 user.roles.add(role)
                 .then(() => {

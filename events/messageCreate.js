@@ -21,6 +21,7 @@ module.exports = {
                 const strikes = JSON.parse(strikesFile);
                 let message_remove = name.message_remove;
                 let strikes_given = name.strikes_given;
+                let response = name.response;
 
                 if (message_remove) message.delete();
 
@@ -35,7 +36,11 @@ module.exports = {
         
                 punish(message.member);
 
-                message.reply({ content: `You said a bad word, stinky >:c`, ephemeral: true });
+                console.log(response)
+                if (response != null) {
+                    console.log(response)
+                    message.reply({ content: response, ephemeral: true });
+                }
             }
         }
     }

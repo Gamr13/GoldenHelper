@@ -54,7 +54,7 @@ module.exports = {
                 .then(role => {
                     user.roles.add(role)
                     .then(() => {
-                         let followupEmbed = new EmbedBuilder()
+                        let followupEmbed = new EmbedBuilder()
                         .setColor('#920dff')
                         .setTitle(`Rankup!`)
                         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
@@ -65,6 +65,9 @@ module.exports = {
                     .catch(err => {
                         console.error(err);
                     });
+                })
+                .catch(err => {
+                    console.error(err); 
                 });
             }
         }

@@ -14,7 +14,7 @@ module.exports = {
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`<@${message.member.id}> has deleted a message!`)
         .addFields(
-            { name: 'Deleted Message', value: `${message}`, inline: false }
+            { name: 'Deleted Message', value: `${message.content}`, inline: false }
         );
 
         try {

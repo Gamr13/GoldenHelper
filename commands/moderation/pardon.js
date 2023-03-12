@@ -15,7 +15,7 @@ module.exports = {
 
 	
     async execute(interaction) {
-        const user = interaction.options.getUser("user");
+        const user = interaction.options.getMember("user");
 
         const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");
         const strikes = JSON.parse(strikesFile);

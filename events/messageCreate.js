@@ -8,7 +8,7 @@ module.exports = {
 
     // Code to be run when any message is sent.
     async execute(message) {
-        if (message.author.bot) return;
+        if (!message.member || !message.content || !message || message.author.bot) return;
 
         const blacklistFile = fs.readFileSync("./data/blacklist.json", "utf8");
         const blacklist = JSON.parse(blacklistFile);

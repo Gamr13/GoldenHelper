@@ -9,7 +9,7 @@ module.exports = {
     .setName("strike")
     .setDescription("Command to strike a user")
     .addUserOption(user => user
-        .setName("user")
+        .setName("member")
         .setDescription("Target member.")
         .setRequired(true)
     )
@@ -22,7 +22,7 @@ module.exports = {
 
 
     async execute(interaction) {
-        const user = interaction.options.getUser("user");
+        const user = interaction.options.getMember("member");
         const reason = interaction.options.getString("reason");
 
         const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");

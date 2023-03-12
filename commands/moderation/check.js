@@ -31,15 +31,22 @@ module.exports = {
         } else {
             content = data[user.id].strikes;
         }
-
+		
+		
+		
         let embed = new EmbedBuilder()
         .setColor('#920dff')
-        .setTitle(`Strikes`)
-        .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
-        .setDescription(`:white_check_mark: Information for: ${user.user.tag} (ID: ${user.id} )`)
+        .setTitle(`User Check`)
+        .setAuthor({name: `${user.user.tag} (ID: ${user.id})`, iconURL:`${user.displayAvatarURL()}`})
         .setThumbnail(`${user.displayAvatarURL()}`)
         .addFields(
-            { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true }
+            { name: ':triangular_flag_on_post: Strikes: ', value: `${content}`, inline: true },
+			{ name: 'Joined At: ', value: `<t:${parseInt(user.joinedAt / 1000)}:R>`, inline: true },
+			{ name: 'Joined Discord: ', value: `<t:${parseInt(user.user.createdTimestamp / 1000)}:R>`, inline: true },
+			{ name: 'Timed out until: ', value: `${user.communicationDisabledUntil}`, inline: false },
+			{ name: "Hasn't passed membership gate?: ", value: `${user.pending}`, inline: false },
+			{ name: 'Started Server Boosting: ', value: `${user.premiumSince}`, inline: false },
+			{ name: 'Roles: ', value: `${user.roles.cache.map(r => r).join(' ')}`, inline: false }
         );
         interaction.reply({ embeds: [embed] }); 
     }

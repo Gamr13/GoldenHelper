@@ -18,7 +18,7 @@ module.exports = {
         .setDescription("Reason for the strike.")
         .setRequired(true)
     )
-	.setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
+    .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
 
 
     async execute(interaction) {
@@ -49,7 +49,18 @@ module.exports = {
         );
 
         interaction.reply({ embeds: [embed] });
+
+        let logEmbed = new EmbedBuilder()
+    .setColor('#9e2352')
+    .setTitle('Strike Given')
+    .setAuthor({name: `${user.user.tag} (ID: ${user.id})`, iconURL:`${user.displayAvatarURL()}`})
+    .setDescription(`Strike applied to ${user.user.tag}.`)
+    .addFields(
+           { name: ':triangular_flag_on_post: Strikes: ', value: `${strikes}`, inline: true },
+    )
+
         client.channels.cache.get("1007583776949403720")
-        .send(`${user.user.tag} has been striked for: ${reason}`);
+    .send({ embeds: [logEmbed] });
+
     }
 }

@@ -24,6 +24,8 @@ module.exports = {
     async execute(interaction) {
         const user = interaction.options.getMember("member");
         const reason = interaction.options.getString("reason");
+        
+        if (!user) interaction.reply({ content: "User not found!", ephemeral: true });
 
         const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");
         const strikes = JSON.parse(strikesFile);

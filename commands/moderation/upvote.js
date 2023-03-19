@@ -1,5 +1,4 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
-const { client } = require("../../index.js");
 const fs = require("fs");
 
 module.exports = {
@@ -50,7 +49,7 @@ module.exports = {
 
         for (const k in rep[0]) {
             if (rep[1][interaction.guild.id][user.id].rep == k) {
-                let role = interaction.guild.roles.fetch(rep[0][k])
+                interaction.guild.roles.fetch(rep[0][k])
                 .then(role => {
                     user.roles.add(role)
                     .then(() => {
@@ -70,6 +69,8 @@ module.exports = {
                     console.error(err); 
                 });
                 // fuck you, discord.js :)
+            } else {
+                interaction.guild.roles.fetch(rep[0][k]).then(_role => user.roles.remove(_role)).catch(err => console.error(err));
             }
         }
     }

@@ -1,1 +1,7 @@
-{}
+{
+  "test": {
+    "message_remove": true,
+    "strikes_given": 1,
+    "response": "maybe"
+  }
+}

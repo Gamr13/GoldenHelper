@@ -32,15 +32,11 @@ module.exports = {
                     strikes[message.author.id].strikes += strikes_given;
                 }
                 fs.writeFileSync("./data/strikes.json", JSON.stringify(strikes, null, 2), "utf8");
-        
-                punish(message.member);
 
                 let msg = message.channel.send(response);
                 
                 if (response.length > 0) message.channel.send(response).then(msg => { setTimeout(() => msg.delete(), 10000) });
                 if (message_remove) await message.delete();
-                
-                msg.delet
             }
         }
     }

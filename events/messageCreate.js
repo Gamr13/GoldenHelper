@@ -35,8 +35,12 @@ module.exports = {
         
                 punish(message.member);
 
-                if (response.length > 0) message.author.send(response).catch(err => return);
+                let msg = message.channel.send(response);
+                
+                if (response.length > 0) message.channel.send(response).then(msg => { setTimeout(() => msg.delete(), 10000) });
                 if (message_remove) await message.delete();
+                
+                msg.delet
             }
         }
     }

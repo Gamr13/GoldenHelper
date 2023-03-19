@@ -35,7 +35,7 @@ module.exports = {
 
                 let msg = message.channel.send(response);
                 
-                if (response.length > 0) message.channel.send(response).then(msg => { setTimeout(() => { return msg.delete() }, 10000) });
+                if (response && response.length > 0) return message.channel.send(response).then(msg => { setTimeout(() => msg.delete(), 15000) });
                 if (message_remove) await message.delete();
             }
         }

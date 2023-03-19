@@ -35,7 +35,7 @@ module.exports = {
         
                 punish(message.member);
 
-                if (response.length > 0) message.reply({ content: `${response}`, ephemeral: true });
+                if (response.length > 0) message.author.send(response);
                 if (message_remove) await message.delete();
             }
         }

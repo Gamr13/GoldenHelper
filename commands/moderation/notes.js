@@ -1,4 +1,4 @@
-const { ButtonBuilder, ActionRowBuilder, SlashCommandBuilder, ButtonStyle, EmbedBuilder, PermissionsBitField } = require("discord.js");
+const { ButtonBuilder, ActionRowBuilder, SlashCommandBuilder, ButtonStyle, EmbedBuilder, PermissionsBitField, PermissionFlagsBits } = require("discord.js");
 const fs = require("fs");
 
 module.exports = {
@@ -28,7 +28,8 @@ module.exports = {
             .setDescription("Target User.")
             .setRequired(true)    
         )
-    ),
+    )
+    .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
 
     async execute(interaction) {
         const user_add = interaction.options.getUser("user_add");

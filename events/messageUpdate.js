@@ -6,8 +6,9 @@ module.exports = {
     once: false,
 
     execute(oldMessage, newMessage) {
+        if (!oldMessage || !newMessage || !oldMessage.member || !oldMessage.content || !oldMessage || oldMessage.author.bot) return;
         let embed = new EmbedBuilder()
-        .setColor('#920dff')
+        .setColor('#F2F524')
         .setTitle(`Message Updated`)
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
         .setDescription(`<@${oldMessage.member.id}> has edited a message!`)

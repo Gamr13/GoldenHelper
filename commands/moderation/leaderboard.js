@@ -9,7 +9,7 @@ module.exports = {
 
     async execute(interaction) {
         const repFile = fs.readFileSync("./data/rep.json", "utf8");
-        const rep = JSON.parse(repFile)[interaction.guild.id];
+        const rep = JSON.parse(repFile)[1][interaction.guild.id];
         
         let embed = new EmbedBuilder()
         .setColor('#920dff')

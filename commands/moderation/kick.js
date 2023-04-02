@@ -1,12 +1,14 @@
-const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('kick')
     .setDescription('This commands kicks a server member')
     .addUserOption(option => option.setName('target').setDescription('The user you would like to kick').setRequired(true))
-    .addStringOption(option => option.setName('reason').setDescription('The reason for kicking the user.')),
-    async execute (interaction, client) {
+    .addStringOption(option => option.setName('reason').setDescription('The reason for kicking the user.'))
+    .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers),
+
+	async execute (interaction, client) {
 
         const kickUser = interaction.options.getUser('target');
         const kickMember = await interaction.guild.members.fetch(kickUser.id);
@@ -20,15 +22,15 @@ module.exports = {
         if (!reason) reason = "No reason given.";
 
         let dmMessageContent = [
-            "awoo",
-            "mlem",
-            "coded by gay furry L"
+            `:boot: ｜ You've been kicked from **${interaction.guild.name}**.`,
+            `:boot: ｜ Ouch! You've been booted from **${interaction.guild.name}**.`,
+            `:boot: ｜ I shidded and farded.`
         ];
 
         const dmEmbed = new EmbedBuilder()
         .setColor("DarkOrange")
         .addFields(
-            { name: ':white_check_mark:', value: `{dmMessageContent[Math.floor(Math.random() * 3)]}`, inline: false },
+            { name: ':white_check_mark:', value: `${dmMessageContent[Math.floor(Math.random() * 3)]}`, inline: false },
             { name: 'Reason:', value: `${reason}`, inline: false },
         )
         

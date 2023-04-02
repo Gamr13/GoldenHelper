@@ -7,8 +7,8 @@ module.exports = {
     once: false,
 
     // Code to be run when any message is sent.
-    execute(message) {
-        if (message.author.bot) return;
+    async execute(message) {
+        if (!message || !message.member || !message.content || message.author.bot) return;
 
         const blacklistFile = fs.readFileSync("./data/blacklist.json", "utf8");
         const blacklist = JSON.parse(blacklistFile);
@@ -17,12 +17,14 @@ module.exports = {
             let name = blacklist[index];
 
             if (message.content.toLowerCase().includes(index)) {
+                if (message.member.roles.has("1007583854237847673") || message.member.roles.has("1007585966011207790")) return;
+
                 const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");
                 const strikes = JSON.parse(strikesFile);
                 let message_remove = name.message_remove;
                 let strikes_given = name.strikes_given;
+                let response = name.response;
 
-                if (message_remove) message.delete();
 
                 if (!strikes[message.author.id]) {
                     strikes[message.author.id] = {
@@ -35,7 +37,8 @@ module.exports = {
         
                 punish(message.member);
 
-                message.reply({ content: `You said a bad word, stinky >:c`, ephemeral: true });
+                if (response) message.reply({ content: response, ephemeral: true });
+                if (message_remove) await message.delete();
             }
         }
     }

@@ -13,6 +13,10 @@ module.exports = {
         .setDescription("Target member.")
         .setRequired(true)
     )
+    .addNumberOption(amount => amount
+        .setName("amount")
+        .setDescription("Amount of strikes to give. DEFAULT: 0")
+    )
     .addStringOption(reason => reason
         .setName("reason")
         .setDescription("Reason for the strike.")
@@ -23,6 +27,7 @@ module.exports = {
 
     async execute(interaction) {
         const user = interaction.options.getMember("member");
+        const amount = interaction.options.getNumber("amount") || 0;
         const reason = interaction.options.getString("reason");
         
         console.log(user)
@@ -32,10 +37,12 @@ module.exports = {
 
         if (!strikes[user.id]) {
             strikes[user.id] = {
-                strikes: 1
+                strikes: amount,
+                reason: [reason]
             };
         } else {
             strikes[user.id].strikes += 1;
+            strikes[user.id].reason.push(reason);
         }
         fs.writeFileSync("./data/strikes.json", JSON.stringify(strikes, null, 2), "utf8");
 

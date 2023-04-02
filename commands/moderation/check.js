@@ -21,9 +21,12 @@ module.exports = {
         const dataFile = fs.readFileSync("./data/strikes.json", "utf8");
         const data = JSON.parse(dataFile);
 
+        const reasons = data[user.id].reason; //Array of reasons
+
         if (!data[user.id]) {
             data[user.id] = {
-                strikes: 0
+                strikes: 0,
+                reason: []
             };
 
             const sendData = fs.writeFileSync("./data/strikes.json", JSON.stringify(data, null, 2), "utf8");

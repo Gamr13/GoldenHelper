@@ -8,7 +8,7 @@ module.exports = {
 
     // Code to be run when any message is sent.
     async execute(message) {
-        if (!message.member || !message.content || !message || message.author.bot) return;
+        if (!message || !message.member || !message.content || message.author.bot) return;
 
         const blacklistFile = fs.readFileSync("./data/blacklist.json", "utf8");
         const blacklist = JSON.parse(blacklistFile);
@@ -17,6 +17,8 @@ module.exports = {
             let name = blacklist[index];
 
             if (message.content.toLowerCase().includes(index)) {
+                if (message.member.roles.has("1007583854237847673") || message.member.roles.has("1007585966011207790")) return;
+
                 const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");
                 const strikes = JSON.parse(strikesFile);
                 let message_remove = name.message_remove;
@@ -32,8 +34,10 @@ module.exports = {
                     strikes[message.author.id].strikes += strikes_given;
                 }
                 fs.writeFileSync("./data/strikes.json", JSON.stringify(strikes, null, 2), "utf8");
-                
-                if (response && response.length > 0) message.channel.send(response).then(msg => { setTimeout(() => msg.delete(), 15000) });
+        
+                punish(message.member);
+
+                if (response) message.reply({ content: response, ephemeral: true });
                 if (message_remove) await message.delete();
             }
         }

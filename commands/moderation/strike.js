@@ -29,8 +29,6 @@ module.exports = {
         const user = interaction.options.getMember("member");
         const amount = interaction.options.getNumber("amount") || 0;
         const reason = interaction.options.getString("reason");
-        
-        console.log(user)
 
         const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");
         const strikes = JSON.parse(strikesFile);
@@ -52,12 +50,12 @@ module.exports = {
         .setColor('#920dff')
         .setTitle(`Strike`)
         .setAuthor({name: 'GoldenHelper', iconURL:"https://i.imgur.com/o7MkhhK.png"})
-        .setDescription(`A Strike has been added to ${user.user.tag}`)
+        .setDescription(`${amount} ${(amount == 1) ? "strike" : "strikes"} has been added to ${user.user.tag}`)
         .addFields(
             { name: 'Total Amount of Strikes', value: `${strikes[user.id].strikes}`, inline: false }
         );
 
-        interaction.reply({ embeds: [embed] });
+        await interaction.reply({ embeds: [embed] });
 
         let logEmbed = new EmbedBuilder()
         .setColor('#9e2352')

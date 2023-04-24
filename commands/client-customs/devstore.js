@@ -94,7 +94,7 @@ module.exports = {
 						{ name: 'PPSSPP', value: '[Download](https://drive.google.com/drive/folders/1LCXnJcauEhKgX5Klvwm8ErEo2qu0EJWL?usp=sharing)', inline: true },
 						{ name: 'Flycast', value: '[Download](https://github.com/flyinghead/flycast/releases)', inline: true },
 						{ name: 'XBSX2', value: '[Download](https://github.com/TheRhysWyrill/PCSX2/releases)', inline: true },
-						{ name: 'Retrix Gold', value: '[Download](https://github.com/Aftnet/RetriX/releases)', inline: true },
+						{ name: 'Retrix Gold', value: '[Download](https://github.com/basharast/RetrixGold/releases)', inline: true },
 						{ name: 'Kodi', value: '[Download](http://mirrors.kodi.tv/nightlies/windows/uwp64/)', inline: true },
 						{ name: 'DevilutionX', value: '[Download](https://github.com/diasurgical/devilutionX/releases)', inline: true },
 						{ name: 'Heart of Darkness', value: '[Download](https://github.com/tuxuser/hode/releases)', inline: true },

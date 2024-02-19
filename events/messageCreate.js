@@ -17,7 +17,7 @@ module.exports = {
             let name = blacklist[index];
 
             if (message.content.toLowerCase().includes(index)) {
-                if (message.member.roles.has("1007583854237847673") || message.member.roles.has("1007585966011207790")) return;
+                if (message.member.roles.cache.some(role => role.id === "1007583854237847673") || message.member.roles.cache.some(role => role.id === "1007585966011207790")) return;
 
                 const strikesFile = fs.readFileSync("./data/strikes.json", "utf8");
                 const strikes = JSON.parse(strikesFile);

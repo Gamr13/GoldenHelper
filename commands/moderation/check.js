@@ -21,7 +21,7 @@ module.exports = {
         const dataFile = fs.readFileSync("./data/strikes.json", "utf8");
         const data = JSON.parse(dataFile);
 
-        const reasons = data[user.id].reason; //Array of reasons
+        if (!user && !data[user.id]) return interaction.reply({ephemeral: true, content: "User not found!"});
 
         if (!data[user.id]) {
             data[user.id] = {
@@ -31,6 +31,7 @@ module.exports = {
 
             const sendData = fs.writeFileSync("./data/strikes.json", JSON.stringify(data, null, 2), "utf8");
         } else {
+            const reasons = data[user.id].reason; //Array of reasons
             content = data[user.id].strikes;
         }
 		

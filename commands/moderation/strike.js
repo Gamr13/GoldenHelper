@@ -13,14 +13,14 @@ module.exports = {
         .setDescription("Target member.")
         .setRequired(true)
     )
-    .addNumberOption(amount => amount
-        .setName("amount")
-        .setDescription("Amount of strikes to give. DEFAULT: 0")
-    )
     .addStringOption(reason => reason
         .setName("reason")
         .setDescription("Reason for the strike.")
         .setRequired(true)
+    )
+    .addNumberOption(amount => amount
+        .setName("amount")
+        .setDescription("Amount of strikes to give. DEFAULT: 0")
     )
     .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
 

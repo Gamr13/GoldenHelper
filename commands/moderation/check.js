@@ -21,7 +21,7 @@ module.exports = {
         const dataFile = fs.readFileSync("./data/strikes.json", "utf8");
         const data = JSON.parse(dataFile);
 
-        if (!user && !data[user.id]) return interaction.reply({ephemeral: true, content: "User not found!"});
+        if (!user && !data[user.user.id]) return interaction.reply({ephemeral: true, content: "User not found!"});
 
         if (!data[user.id]) {
             data[user.id] = {

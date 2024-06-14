@@ -23,8 +23,7 @@ module.exports = {
 
         let dmMessageContent = [
             `:boot: ｜ You've been kicked from **${interaction.guild.name}**.`,
-            `:boot: ｜ Ouch! You've been booted from **${interaction.guild.name}**.`,
-            `:boot: ｜ I shidded and farded.`
+            `:boot: ｜ Ouch! You've been booted from **${interaction.guild.name}**.`
         ];
 
         const dmEmbed = new EmbedBuilder()

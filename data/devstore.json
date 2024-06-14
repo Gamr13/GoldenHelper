@@ -1,104 +1,146 @@
 [
     {
         "title": "RetroArch",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "RetroArch is a frontend for emulators, game engines and media players.",
         "imagePath": "retroarch.png",
-        "downloadURL": "https://drive.google.com/drive/folders/1vkiYvIObU6T1DvYbIE3uEFsHb39jkBio?usp=sharing"
+        "downloadURL": "https://drive.google.com/drive/folders/1zu_DEpQzEJ-L9UYiViVUXjkFygtnxWDv?usp=drive_link"
     },
     {
         "title": "DurangoFTP",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Transfer files wirelessly on your local network! (No longer recommended)",
         "imagePath": "FTP.jpg",
         "downloadURL": "https://github.com/Dantes-Dungeon/DURANGO-FTP/releases"
     },
     {
-        "title": "ADV File Explorer Ex",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
-        "imagePath": "discord.png",
-        "downloadURL": "https://www.mediafire.com/file/2kuk79p111f9mm1/Adv_File_Explorer_Ex_%2528v1.6.6.0%2529.7z/file"
-    },
-    {
         "title": "PPSSPP",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Standalone PlayStation Portable Emulator.",
         "imagePath": "pspppGold.jpg",
         "downloadURL": "https://drive.google.com/drive/folders/1LCXnJcauEhKgX5Klvwm8ErEo2qu0EJWL?usp=sharing"
     },
     {
         "title": "Flycast",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Standalone Sega Dreamcast, Naomi, Naomi 2, and Atomiswave Emulator.",
         "imagePath": "flycast.png",
         "downloadURL": "https://github.com/flyinghead/flycast/releases"
     },
     {
         "title": "XBSX2",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Standalone PlayStation 2 Emulator.",
         "imagePath": "discord.png",
-        "downloadURL": "https://github.com/TheRhysWyrill/PCSX2/releases"
+        "downloadURL": "https://drive.google.com/file/d/1v05Xanr1k0Rstk9hvJmsm1_Jv75pmx3U/view?usp=sharing"
     },
     {
         "title": "Retrix Gold",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Retrix Gold is a frontend for Libretro Cores, it supports less than RetroArch currently but is much simpler to use.",
         "imagePath": "retrix.png",
         "downloadURL": "https://github.com/Aftnet/RetriX/releases"
     },
     {
         "title": "Kodi",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "A free and open source media player application.",
         "imagePath": "kodi.jpg",
         "downloadURL": "http://mirrors.kodi.tv/nightlies/windows/uwp64/"
     },
     {
+        "title": "Cave Story",
+        "description": "A complete open-source clone/rewrite of the masterpiece jump-and-run platformer Doukutsu Monogatari (also known as Cave Story). ",
+        "imagePath": "cavestory.png",
+        "downloadURL": "https://github.com/Xbox-Homebrew/nxengine-evo/releases/"
+    },
+    {
+        "title": "Trogdor Reburninated",
+        "description": "Trogdor burninates the countryside, peasants, and thatched-roof cottages of Peasantry. ",
+        "imagePath": "trogdor.png",
+        "downloadURL": "https://github.com/Xbox-Homebrew/Trogdor-Reburninated/releases"
+    },
+    {
         "title": "DevilutionX",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "A source port of Diablo and Hellfire that strives to make it simple to run the game while providing engine improvements, bugfixes, and some optional quality of life features.",
         "imagePath": "DvX.png",
         "downloadURL": "https://github.com/diasurgical/devilutionX/releases"
     },
     {
         "title": "Heart of Darkness",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "A fiendish force scours the land in search of Andy, a young boy on a quest to rescue his dog Whisky.",
         "imagePath": "hode.jpg",
         "downloadURL": "https://github.com/tuxuser/hode/releases"
     },
     {
         "title": "OpenLara",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Explore Peru, Greece, Egypt and the lost continent of Atlantis in search of an ancient artifact.",
         "imagePath": "openLara.jpg",
         "downloadURL": "https://github.com/XProger/OpenLara/releases"
     },
     {
         "title": "Relic Hunters Zero",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "A remaster of the FREE 1 million player hit game about blasting evil space ducks and turtles with tiny cute guns.",
         "imagePath": "discord.png",
         "downloadURL": "https://github.com/MDashK/Relic-Hunters-Zero-Xbox/releases"
     },
     {
         "title": "Prince of Persia",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Navigate dungeons by running, climbing, and avoiding traps. A familiar looking pursuer awaits.",
         "imagePath": "pop.jpg",
         "downloadURL": "https://github.com/Xbox-Homebrew/SDLPoP/releases"
     },
     {
         "title": "VVVVVV",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "A challenging 2D action/platformer with one deceptively simple gameplay mechanic.",
         "imagePath": "VVVVVV.jpg",
         "downloadURL": "https://github.com/Xbox-Homebrew/DURANGO-V6/releases"
     },
     {
+        "title": "Sonic Mania",
+        "description": "Re-live the Sonic of the past with an exciting new twist on classic zones while fighting against new bosses and Dr. Eggman's evil robot army. ",
+        "imagePath": "sonicmania.jpg",
+        "downloadURL": "https://www.mediafire.com/file/4048h3ugbypekm9/RSDKv5.UWP_1.3.0.0_x64.appx/file"
+    },
+    {
+        "title": "Sonic 1",
+        "description": "Play as a blue little lad and destroy the monstrous rancid EggMan.",
+        "imagePath": "sonic2.png",
+        "downloadURL": "https://www.mediafire.com/file/492x5kwxehebqld/Sonic1Decomp.UWP_1.0.9.0_x64.appxbundle/file"
+    },
+    {
+        "title": "Sonic 2",
+        "description": "Play as a blue little lad and destroy the monstrous rancid EggMan. This time with a friend!",
+        "imagePath": "sonic2.png",
+        "downloadURL": "https://www.mediafire.com/file/6dzrg3dx219rp83/Sonic2Decomp.UWP_1.0.9.0_x64.appxbundle/file"
+    },
+    {
+        "title": "Sonic CD",
+        "description": "Travel through time to defeat a metallic doppelganger and save your platonic pink friend!",
+        "imagePath": "soniccd2.png",
+        "downloadURL": "https://www.mediafire.com/file/yq59jvj4z5axzlx/SonicCDDecompUWP_1.0.21.0_x64.appxbundle/file"
+    },
+    {
         "title": "Sonic 1 SMS Remake",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "This game is a redesigned version of the Master System released by SEGA in 1991",
         "imagePath": "sonic1.jpg",
-        "downloadURL": "https://github.com/MDashK/sonic-1-sms-remake-xbox/releases"
+        "downloadURL": "https://www.mediafire.com/file/4048h3ugbypekm9/RSDKv5.UWP_1.3.0.0_x64.appx/file"
     },
     {
         "title": "Sonic 2 SMS Remake",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "This game is a redesigned version of the Master System released by SEGA in 1992",
         "imagePath": "sonic2.jpg",
         "downloadURL": "https://github.com/MDashK/sonic-2-sms-remake-xbox/releases"
     },
     {
         "title": "Sonic Time Twisted",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum tempus egestas sed sed risus pretium quam vulputate. Pellentesque dignissim enim sit amet venenatis urna cursus eget.",
+        "description": "Sonic Time Twisted is an unofficial classic-style Sonic the Hedgehog fangame",
         "imagePath": "STT.png",
         "downloadURL": "https://www.mediafire.com/file/74shtqbyzr4q2dg/Sonic_Time_Twisted_%255BUnofficial%255D_%2528v1.1.2.0%2529.appx/file"
+    },
+    {
+        "title": "Twitch",
+        "description": " Watch your favorite livestreams on Twitch!",
+        "imagePath": "twitch.png",
+        "downloadURL": "https://www.mediafire.com/file/vqg4nv25kpenuz/Twitch.zip/file"
+    },
+    {
+        "title": "YouTube",
+        "description": "YouTube is a free video sharing website that makes it easy to watch online videos.",
+        "imagePath": "youtube.png",
+        "downloadURL": "https://www.mediafire.com/file/gbld0vq1p3api9e/YouTube.zip/file"
     }
 ]

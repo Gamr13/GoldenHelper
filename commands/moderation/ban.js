@@ -22,15 +22,13 @@ module.exports = {
         if (!reason) reason = "No reason given.";
         
         let dmMessageContent = [
-            "awoo",
-            "mlem",
-            "coded by gay furry L"
+            `You've been banned from ${interaction.guild.name}`,
         ];
 
         const dmEmbed = new EmbedBuilder()
         .setColor("DarkOrange")
         .addFields(
-            { name: ':white_check_mark:', value: `{dmMessageContent[Math.floor(Math.random() * 3)]}`, inline: false },
+            { name: ':white_check_mark:', value: `{dmMessageContent[Math.floor(Math.random() * 1)]}`, inline: false },
             { name: 'Reason:', value: `${reason}`, inline: false },
         )
 

@@ -20,10 +20,5 @@ const exampleEmbed = new EmbedBuilder()
 		value: '- config\n- playlists\n- saves\n- states\n- system\n- content_history.lpl\n\n**It is not recommended backup retroarch.cfg**\nWe also strongly recommend using a USB flash drive / External HDD to prevent any potential data loss.', 
 		inline: true 
 		},
-		
-		//Unused
-		//{ name: 'Backing up PPSSPP:', 
-		//value: '- PSP\n- Test\n- Test', 
-		//inline: true },
 	)
 	.setTimestamp()

@@ -20,14 +20,14 @@ module.exports = {
     )
     .addNumberOption(amount => amount
         .setName("amount")
-        .setDescription("Amount of strikes to give. DEFAULT: 0")
+        .setDescription("Amount of strikes to give. DEFAULT: 1")
     )
     .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers),
 
 
     async execute(interaction) {
         const user = interaction.options.getMember("member");
-        const amount = interaction.options.getNumber("amount") || 0;
+        const amount = interaction.options.getNumber("amount") || 1;
         const reason = interaction.options.getString("reason");
         
         console.log(user)
